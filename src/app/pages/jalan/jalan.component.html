@@ -1,0 +1,139 @@
+<nb-card class="m-5" style="overflow: hidden;"> 
+	<table class="table">
+		<thead class="thead-dark">
+			<tr>
+				<th scope="col">FID</th>
+				<th scope="col">Nama Jalan</th>
+				<th scope="col">Kecamatan</th>
+				<th scope="col">Panjang</th>
+				<th scope="col">Lebar</th>
+				<!-- <th scope="col">Lapen</th>
+				<th scope="col">Beton</th> -->
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let d of data; let i = index;">
+				<th scope="row">{{i + 1}}</th>
+				<td>{{d.NAMA_RUAS}}</td>
+				<td>{{d.KECAMATAN_}}</td>
+				<td style="text-align: right;">{{d.PANJANG_KM}} KM</td>
+				<td style="text-align: right;">{{d.LEBAR_M}} M</td>
+				<!-- <td style="text-align: right;">{{d.LAPEN_KM}} KM</td>
+				<td style="text-align: right;">{{d.BETON_KM}} KM</td> -->
+				<td><div class="detail" (click)="detail(i)">Detail</div></td>
+			</tr>
+		</tbody>
+	</table>
+</nb-card>
+
+<div *ngIf="isDetail" style="position: absolute; top: 0; left: 0; width: 100%; height: 100vh; background: rgba(125, 125, 125, .5); z-index: 2;" (click)="isDetail = false">
+</div>
+<div *ngIf="isDetail" style="position: absolute; top: 20vh; left: 15%; width: 70%; height: 60vh; display: flex; align-items: center; justify-content: center; z-index: 3; border-radius: 0px; overflow: hidden;">
+	<div style="background: white; overflow-y: scroll; height: 100%; width: 100%;" class="p-3">
+		<div style="margin-bottom: 16px; background: red; padding: 10px; background: #343a40; color: white;">
+			<b>Jl. {{p.NAMA_RUAS}}, KEC. {{p.KECAMATAN_}}</b>
+		</div>
+		<table class="table tp">
+			<tbody>
+				<tr>
+					<td><b>FID</b></td>
+					<td>{{p.FID}}</td>
+				</tr>
+				<tr>
+					<td><b>ID</b></td>
+					<td>{{p.ID}}</td>
+				</tr>
+				<tr>
+					<td><b>NAMA_RUAS</b></td>
+					<td>{{p.NAMA_RUAS}}</td>
+				</tr>
+				<tr>
+					<td><b>KECAMATAN_</b></td>
+					<td>{{p.KECAMATAN_}}</td>
+				</tr>
+				<tr>
+					<td><b>PANJANG_KM</b></td>
+					<td>{{p.PANJANG_KM}}</td>
+				</tr>
+				<tr>
+					<td><b>LEBAR_M</b></td>
+					<td>{{p.LEBAR_M}}</td>
+				</tr>
+				<tr>
+					<td><b>LAPEN_KM</b></td>
+					<td>{{p.LAPEN_KM}}</td>
+				</tr>
+				<tr>
+					<td><b>BETON_KM</b></td>
+					<td>{{p.BETON_KM}}</td>
+				</tr>
+				<tr>
+					<td><b>TELFORD_KE</b></td>
+					<td>{{p.TELFORD_KE}}</td>
+				</tr>
+				<tr>
+					<td><b>TANAH_KM</b></td>
+					<td>{{p.TANAH_KM}}</td>
+				</tr>
+				<tr>
+					<td><b>BELUMTEMBU</b></td>
+					<td>{{p.BELUMTEMBU}}</td>
+				</tr>
+				<tr>
+					<td><b>BAIK_KM</b></td>
+					<td>{{p.BAIK_KM}}</td>
+				</tr>
+				<tr>
+					<td><b>BAIK__PERS</b></td>
+					<td>{{p.BAIK__PERS}}</td>
+				</tr>
+				<tr>
+					<td><b>SEDANG_KM</b></td>
+					<td>{{p.SEDANG_KM}}</td>
+				</tr>
+				<tr>
+					<td><b>SEDANG_PER</b></td>
+					<td>{{p.SEDANG_PER}}</td>
+				</tr>
+				<tr>
+					<td><b>RUSAKRINGA</b></td>
+					<td>{{p.RUSAKRINGA}}</td>
+				</tr>
+				<tr>
+					<td><b>RUSAKRIN00</b></td>
+					<td>{{p.RUSAKRIN00}}</td>
+				</tr>
+				<tr>
+					<td><b>RUSAKBERAT</b></td>
+					<td>{{p.RUSAKBERAT}}</td>
+				</tr>
+				<tr>
+					<td><b>RUSAKBER00</b></td>
+					<td>{{p.RUSAKBER00}}</td>
+				</tr>
+				<tr>
+					<td><b>LHR</b></td>
+					<td>{{p.LHR}}</td>
+				</tr>
+				<tr>
+					<td><b>AKSES_KE_N</b></td>
+					<td>{{p.AKSES_KE_N}}</td>
+				</tr>
+				<tr>
+					<td><b>KETERANGAN</b></td>
+					<td>{{p.KETERANGAN}}</td>
+				</tr>
+				<tr>
+					<td><b>STA_AWAL</b></td>
+					<td>{{p.STA_AWAL}}</td>
+				</tr>
+				<tr>
+					<td><b>STA_AKHIR</b></td>
+					<td>{{p.STA_AKHIR}}</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+</div>

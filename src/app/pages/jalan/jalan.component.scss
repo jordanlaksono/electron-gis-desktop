@@ -1,0 +1,30 @@
+.detail{
+	padding: 0 10px;
+	border-radius: 10px;
+	border: 1px solid #36f;
+	color: #36f;
+	text-align: center;
+	cursor: pointer;
+
+	&:active{
+		background: #36f;
+		color: white;
+	}
+}
+
+.tp {
+
+	tr:first-child{
+		td{
+			border-top: none !important;
+		}
+	}
+}
+
+
+.content{
+	overflow-y: scroll !important;
+	height: 100vh !important;
+	position: relative;
+}
+

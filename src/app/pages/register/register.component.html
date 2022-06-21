@@ -1,0 +1,36 @@
+<h1 id="title" class="title">Register</h1>
+<form aria-labelledby="title">
+
+    <div class="form-control-group">
+        <label class="label" for="input-name">Username:</label>
+        <input type="text"
+            nbInput
+            fullWidth
+            placeholder="Username"
+            [(ngModel)]="tempDoc.username"
+            [ngModelOptions]="{standalone: true}"
+            #input
+            >
+    </div>
+    <div class="form-control-group">
+        <label class="label" for="input-email">Password:</label>
+        <input type="password"
+            nbInput
+            fullWidth
+            placeholder="Password"
+            [(ngModel)]="tempDoc.password"
+            [ngModelOptions]="{standalone: true}"
+            >
+    </div>
+
+    <button nbButton
+          fullWidth
+          status="primary"
+          size="large"
+          (click)=submit()>
+    Register
+  </button>
+</form>
+<section class="another-action" aria-label="Register">
+    Don't have an account? <a class="text-link" routerLink="../">Sign In</a>
+</section>

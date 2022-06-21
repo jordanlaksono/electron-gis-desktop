@@ -1,0 +1,38 @@
+<div style="width: 100%; height: 100%; padding: 40px; position: relative;">
+  <div style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: -1;">
+    <svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 30 600 300">
+      <g><title>Layer 1</title><path d="m579.5,-2.546875" fill="#fff" fill-opacity="null" id="svg_4" opacity="0.5" stroke="#000" stroke-opacity="null" stroke-width="1.5"></path><path d="m-22.5,130.453125" fill="#fff" fill-opacity="null" id="svg_7" opacity="0.5" stroke="#000" stroke-opacity="null" stroke-width="1.5"></path><path d="m25.5,57.453125c0,1 1.962015,1.224915 25,5c25.959679,4.253845 53.987076,7.499924 83,8c25.99614,0.448074 43.958466,0.499237 53,1c3.993881,0.221199 7.458801,-0.306564 8,1c0.765366,1.847755 -1.794876,4.220215 -5,7c-7.554535,6.552017 -15.795532,10.578987 -21,19c-1.662506,2.689995 5.571136,-4.521263 27,-15c24.716721,-12.086502 59.006012,-9.835503 58,-19c-0.109116,-0.99403 -6,0 -24,9c-18,9 -24.870285,28.866829 -30,24c-9.759949,-9.259773 17,-26 25,-40l2,-9l0,-3" fill="none" id="svg_10" stroke-width="1.5"></path><rect fill="#4caf50" height="370.00001" id="svg_14" stroke="null" stroke-width="1.5" width="698" x="-44.5" y="71.453115"></rect><path d="m-38.125,113.45313c30,17 389,99 388,100c-1,1 237,-50.90626 254.5,-49.45313c38.5,-44.54687 20.5,-141.54688 20,-141c0.5,-0.54688 -451.5,-19.54688 -452,-19c0.5,-0.54688 -239.5,-3.54688 -239,-3c-0.5,-0.54688 -0.5,97.45313 0,97l35.5,45.45313z" fill="#ffca28" id="svg_9" stroke-width="1.5"></path><path d="m-16.5,111.45313c1,1 382,65 381,66c-1,1 249,-31 248.5,-31.45313c0.5,0.45313 26.5,-159.54688 26,-159c0.5,-0.54688 -451.5,-19.54688 -452,-19c0.5,-0.54688 -239.5,-3.54688 -239,-3c-0.5,-0.54688 -0.5,97.45313 0,97c-0.5,0.45313 34.5,48.45313 35.5,49.45313z" fill="#ff5656" id="svg_8" stroke-width="1.5"></path></g>
+    </svg>
+  </div>
+  <div style="width: 100%; height: 100%; border: 4px solid #FFCA28; border-radius: 40px; display: flex; flex-direction: column;">
+    <div style="display: flex; align-items: center; justify-content: center; padding: 24px;">
+      <div>
+        <img src="assets/images/kab-sorong.png" style="width: 100px;">
+      </div>
+      <div style="flex: 1; display: flex; flex-direction: column; align-items: center;justify-content: center;">
+        <div style="font-size: 30pt; font-weight: bold;">PEMERINTAH KABUPATEN SORONG SELATAN</div>
+        <div style="font-size: 24pt; font-weight: bold;">DINAS PEKERJAAN UMUM DAN PENATAAN RUANG</div>
+        <div style="font-size: 20pt;">Kompl. Kantor Bupati Sesna, Teminabuan</div>
+      </div>
+      <div>
+        <img src="assets/images/pu.png" style="width: 100px;">
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: center;">
+      <div style="width: 80%; height: 4px; background: black; border-radius: 4px;"></div>
+    </div>
+    <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+      <form style="background: rgba(255,255,255, .2); border-radius: 16px; padding: 16px; width: 500px; color: black;">
+        <div style="display: flex; flex-direction: column;">
+          <label style="font-weight: bold;">Username:</label>
+          <input type="text" fullWidth placeholder="Username" [(ngModel)]="loginData.username" [ngModelOptions]="{standalone: true}" style="padding: 10px; border-radius: 10px; border: none; margin-top: 5px;">
+        </div>
+        <div style="display: flex; flex-direction: column; margin-top: 10px;">
+          <label style="font-weight: bold;">Password:</label>
+          <input type="password" fullWidth placeholder="Password" [(ngModel)]="loginData.password" [ngModelOptions]="{standalone: true}" style="padding: 10px;border-radius: 10px; border: none; margin-top: 5px;">
+        </div>
+        <button style="margin-top: 16px; padding: 16px; width: 100%; background: #ffffff; border: none; border-radius: 10px; font-weight: bold;" status="success" (click)=submit()>Masuk</button>
+      </form>
+    </div>
+  </div>
+</div>

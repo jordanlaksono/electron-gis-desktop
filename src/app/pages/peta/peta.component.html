@@ -1,0 +1,111 @@
+<div #map id="map" style="width:100%; height:100%;"></div>
+<div *ngIf="isPopup" style="position: absolute; width: 100%; height: 100vh; top: 0; left: 0; z-index: 1000; background: rgba(125, 125, 125, .5);" (click)="isPopup = false"></div>
+<div *ngIf="isPopup" style="position: absolute; top: 7%; left: 10%; width: 80%; height: 80%; z-index: 1001;">
+	<nb-card style="width: 100%;">
+		<nb-card-header>DETAIL SURVEY JALAN</nb-card-header>
+		<nb-card-body>
+			<div class="row">
+				<div class="row col-md-12 mb-3">
+					<div class="row col-md-6 m-0">
+						<div class="col-md-5 d-flex align-items-center">NAMA RUAS</div>
+						<div class="col-md-1 d-flex align-items-center">: </div>
+						<input class="col-md-6" nbInput [value]="popupData?.NAMA_RUAS">
+					</div>
+					<div class="row col-md-6 m-0">
+						<div class="col-md-5 d-flex align-items-center">KECAMATAN</div>
+						<div class="col-md-1 d-flex align-items-center">: </div>
+						<input class="col-md-6" nbInput [value]="popupData?.KECAMATAN_">
+					</div>
+				</div>
+				<div class="row col-md-12 mb-3">
+					<div class="row col-md-6 m-0">
+						<div class="col-md-5 d-flex align-items-center">PANJANG</div>
+						<div class="col-md-1 d-flex align-items-center">: </div>
+						<input class="col-md-6" nbInput [value]="popupData?.PANJANG_KM">
+					</div>
+					<div class="row col-md-6 m-0">
+						<div class="col-md-5 d-flex align-items-center">LEBAR</div>
+						<div class="col-md-1 d-flex align-items-center">: </div>
+						<input class="col-md-6" nbInput [value]="popupData?.LEBAR_M">
+					</div>
+				</div>
+				<div class="row col-md-12 mb-3">
+					<div class="row col-md-6 m-0">
+						<div class="col-md-5 d-flex align-items-center">LAPEN</div>
+						<div class="col-md-1 d-flex align-items-center">: </div>
+						<input class="col-md-6" nbInput [value]="popupData?.LAPEN_KM">
+					</div>
+					<div class="row col-md-6 m-0">
+						<div class="col-md-5 d-flex align-items-center">BETON</div>
+						<div class="col-md-1 d-flex align-items-center">: </div>
+						<input class="col-md-6" nbInput [value]="popupData?.BETON_KM">
+					</div>
+				</div>
+				<div class="row col-md-12 mb-3">
+					<div class="row col-md-6 m-0">
+						<div class="col-md-5 d-flex align-items-center">TANAH</div>
+						<div class="col-md-1 d-flex align-items-center">: </div>
+						<input class="col-md-6" nbInput [value]="popupData?.TANAH_KM">
+					</div>
+					<div class="row col-md-6 m-0">
+						<div class="col-md-5 d-flex align-items-center">BELUMTEMBU</div>
+						<div class="col-md-1 d-flex align-items-center">: </div>
+						<input class="col-md-6" nbInput [value]="popupData?.BELUMTEMBU">
+					</div>
+				</div>
+				<div class="row col-md-12 mb-3">
+					<div class="row col-md-6 m-0">
+						<div class="col-md-5 d-flex align-items-center">BAIK</div>
+						<div class="col-md-1 d-flex align-items-center">: </div>
+						<input class="col-md-6" nbInput [value]="popupData?.BAIK_KM">
+					</div>
+					<div class="row col-md-6 m-0">
+						<div class="col-md-5 d-flex align-items-center">BAIK__PERS</div>
+						<div class="col-md-1 d-flex align-items-center">: </div>
+						<input class="col-md-6" nbInput [value]="popupData?.BAIK__PERS">
+					</div>
+				</div>
+				<div class="row col-md-12 mb-3">
+					<div class="row col-md-6 m-0">
+						<div class="col-md-5 d-flex align-items-center">SEDANG_KM</div>
+						<div class="col-md-1 d-flex align-items-center">: </div>
+						<input class="col-md-6" nbInput [value]="popupData?.SEDANG_KM">
+					</div>
+					<div class="row col-md-6 m-0">
+						<div class="col-md-5 d-flex align-items-center">SEDANG_PER</div>
+						<div class="col-md-1 d-flex align-items-center">: </div>
+						<input class="col-md-6" nbInput [value]="popupData?.SEDANG_PER">
+					</div>
+				</div>
+				<div class="row col-md-12 mb-3">
+					<div class="row col-md-6 m-0">
+						<div class="col-md-5 d-flex align-items-center">RUSAKRINGA</div>
+						<div class="col-md-1 d-flex align-items-center">: </div>
+						<input class="col-md-6" nbInput [value]="popupData?.RUSAKRINGA">
+					</div>
+					<div class="row col-md-6 m-0">
+						<div class="col-md-5 d-flex align-items-center">RUSAKRIN00</div>
+						<div class="col-md-1 d-flex align-items-center">: </div>
+						<input class="col-md-6" nbInput [value]="popupData?.RUSAKRIN00">
+					</div>
+				</div>
+				<div class="row col-md-12 mb-3">
+					<div class="row col-md-6 m-0">
+						<div class="col-md-5 d-flex align-items-center">RUSAKBERAT</div>
+						<div class="col-md-1 d-flex align-items-center">: </div>
+						<input class="col-md-6" nbInput [value]="popupData?.RUSAKBERAT">
+					</div>
+					<div class="row col-md-6 m-0">
+						<div class="col-md-5 d-flex align-items-center">RUSAKBER00</div>
+						<div class="col-md-1 d-flex align-items-center">: </div>
+						<input class="col-md-6" nbInput [value]="popupData?.RUSAKBER00">
+					</div>
+				</div>
+			</div>
+
+		</nb-card-body>
+		<nb-card-footer>
+			<button nbButton (click)="isPopup = false">Tutup</button>
+		</nb-card-footer>
+	</nb-card>
+</div>
